@@ -7,6 +7,7 @@
 
    <!-- Font-Awesome -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
    <script src="https://kit.fontawesome.com/cfa41e25a3.js" crossorigin="anonymous"></script>
 
    <!-- Stylesheet -->
@@ -15,6 +16,8 @@
    <!-- JavaScript -->
    <script src="./src/js/data.js"></script>
    <script src="./src/js/dom.js"></script>
+   <script src="./src/js/slides.js"></script>
+   <script src="./src/js/frame.js"></script>
    <script src="./src/js/cart.js"></script>
    <script src="./src/js/main.js"></script>
    <script src="./src/js/footer.js"></script>
@@ -29,7 +32,7 @@
       <a href="./index.html"> <i class="fa fa-fw fa-home"></i> Home</a> 
       <a href="./src/html/contact.html"> <i class="fa fa-fw fa-envelope"></i> Contact</a> 
       <a href="./src/html/login.html"> <i class="fa fa-fw fa-user"></i> Login</a>
-      <a href="./cart.html"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> My Cart</a>
+      <a href="./cart.html"> <i id="cart-icon" class="fa fa-shopping-cart" aria-hidden="true" ></i> My Cart</a>
       <div class="search-container">
          <form action="/action_page.php">
             <input type="text" placeholder="Search..." name="search">
@@ -38,8 +41,22 @@
       </div>
    </nav>
 
+   <div class="slideContainer" >
+      <div class="slideBox">
+         <div class="arrowBox">
+            <div id="left" class="arrow" onclick="toPrevSlide()"><img src="./src/imgs/icons/left-arrow.png" class="arrowImg"></div>
+         </div>
+         <div class="slideDiv"></div>
+         <div class="arrowBox">
+            <div id="right" class="arrow" onclick="toNextSlide()"><img src="./src/imgs/icons/right-arrow.png" class="arrowImg"></div>
+         </div>
+      </div>
+    </div>
+
+    <div class="mainFrameDiv"></div>
+
    <!-- CART -->
-   <div class="cart-container">
+   <div class="cart-container invisible">
       <h2>My Cart</h2>
       <table>
          <thead>
