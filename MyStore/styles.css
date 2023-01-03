@@ -1,5 +1,7 @@
 @import './src/css/main.css';
 @import './src/css/navbar.css';
+@import './src/css/slider.css';
+@import './src/css/frame.css';
 @import './src/css/cart.css';
 @import './src/css/contact.css';
 @import './src/css/footer.css';
@@ -14,4 +16,8 @@ body {
    background: lightgray;
    min-height: 100vm;
    overflow-x: hidden;
+}
+
+.invisible {
+   display:none;
 }
